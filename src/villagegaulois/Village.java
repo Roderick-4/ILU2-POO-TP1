@@ -15,7 +15,7 @@ public class Village {
 	
 	private Marche marche;
 
-	private class Marche {
+	private static class Marche {
 		private Etal[] etals;
 
 		private Marche(int nbEtals) {
@@ -111,7 +111,7 @@ public class Village {
 		return null;
 	}
 
-	public String afficherVillageois() {
+	public String afficherVillageois() throws VillageSansChefException {
 		if (chef == null){
 			throw new VillageSansChefException("Pas de chef");
 		}
